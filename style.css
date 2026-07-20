@@ -1,0 +1,12 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif; /* الخط */
+    background-color: #f4f4f4; /* لون الخلفية */
+    color: #333; /* لون الكلام */
+}
