@@ -1,6 +1,6 @@
 # Campus Events Hub
 
-This repository contains the Phase 2 backend integration for the IT361 Mid-Project. 
+This repository contains the work for the IT361 project.
 The Campus Events Hub is a responsive web application that uses PHP to dynamically load events and process user registrations into a CSV data source.
 
 ## How to Run This Project
