@@ -22,12 +22,18 @@
             <tbody>
                 <?php
                 // يفتح ملف csv
-                $file = @fopen("registrations.csv", "r");
+                $csv_file = __DIR__ . '/registrations.csv';
+                $file = @fopen($csv_file, "r");
                 
                 // يتحقق من وجود الملف واذا انفتح بشكل صحيح
                 if ($file !== FALSE) {
                     // يمشي على كل صف فملف ال csv
                     while (($data = fgetcsv($file, 1000, ",")) !== FALSE) {
+                        // تجاهل الأسطر الفارغة أو غير المكتملة لمنع ظهور التحذيرات
+                        if (empty($data) || count($data) < 4 || trim($data[0]) === '') {
+                            continue;
+                        }
+                        
                         echo "<tr>";
                         echo "<td>" . htmlspecialchars($data[0]) . "</td>"; 
                         echo "<td>" . htmlspecialchars($data[1]) . "</td>"; 

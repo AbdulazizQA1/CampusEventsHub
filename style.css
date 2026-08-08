@@ -90,3 +90,14 @@ input:focus, textarea:focus, select:focus {
     margin-bottom: 20px;
     margin-top: 10px;
 }
+
+/* ستايل لرسالة الفيدباك */
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
